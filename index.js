@@ -4,7 +4,7 @@ var port = 3000;
 var io = require('socket.io')(http);
 
 
-console.log("Hi Mrs. Horning!";)
+console.log("Hi Mrs. Horning!");
 
 app.get('/', function(req,res)
 {
@@ -21,4 +21,4 @@ io.on('connection', function(socket)
 });
 
 http.listen(port);
-console.log("Listening on port" + port);
+console.log("Listening on port: " + port);
