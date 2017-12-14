@@ -20,3 +20,5 @@ io.on('connection', function(socket)
 
 http.listen(port);
 console.log("Listening on port: " + port);
+console.log("enter localhost:3000 to join server");
+
