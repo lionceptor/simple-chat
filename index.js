@@ -9,7 +9,6 @@ console.log("Hi Mrs. Horning!");
 app.get('/', function(req,res)
 {
 	res.sendFile(__dirname + '/index.html');
-
 });
 
 io.on('connection', function(socket)
