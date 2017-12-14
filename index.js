@@ -4,6 +4,11 @@ var port = 3000;
 
 app.get('/', function(req,res)
 {
-	res.send('Hello World!');
+	res.sendFile(__dirname + '/index.html');
 
 }).listen(port); 
+
+io.on('connection', function(socket)
+{
+	console.log('new connection');
+});
