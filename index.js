@@ -11,7 +11,10 @@ app.get('/', function(req,res)
 
 io.on('connection', function(socket)
 {
-	console.log('new connection');
+	socket.on('chat message', function(text)
+	{
+		console.log('message: ' + text);	
+	});
 });
 
 http.listen(port);
