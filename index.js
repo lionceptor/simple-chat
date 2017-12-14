@@ -3,7 +3,6 @@ var http = require('http').Server(app);
 var port = 3000;
 var io = require('socket.io')(http);
 
-
 console.log("Hi Mrs. Horning!");
 
 app.get('/', function(req,res)
