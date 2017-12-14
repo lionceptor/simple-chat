@@ -21,7 +21,7 @@
   {
     var socket = io();
     jQuery('form').submit(function()
-	{
+    {
       socket.emit('chat message', jQuery('#text').val());
       jQuery('#text').val('');
       return false;
