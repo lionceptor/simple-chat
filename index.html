@@ -17,13 +17,13 @@
 <script src = "/socket.io/socket.io.js"></script>
 <script src ="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
-  $(function () 
+  jQuery(function () 
   {
     var socket = io();
-    $('form').submit(function()
+    jQuery('form').submit(function()
 	{
-      socket.emit('chat message', $('#text').val());
-      $('#text').val('');
+      socket.emit('chat message', jQuery('#text').val());
+      jQuery('#text').val('');
       return false;
     });
   });
