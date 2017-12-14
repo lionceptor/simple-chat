@@ -4,14 +4,14 @@
 <title>CompSci III Chat</title>
 <style>
       form input {width: 90%;}
-      form button { width: 9%;}
+      form button {width: 9%;}
 </style>
 </head>
 <body>
 <ul id="messages"></ul>
-
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="text"/>
+	  <button>Send</button>
     </form>
 
 <script src = "/socket.io/socket.io.js"></script>
@@ -22,8 +22,8 @@
     var socket = io();
     $('form').submit(function()
 	{
-      socket.emit('chat message', $('#m').val());
-      $('#m').val('');
+      socket.emit('chat message', $('#text').val());
+      $('#text').val('');
       return false;
     });
   });
