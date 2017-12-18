@@ -2,6 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var port = 3000;
 var io = require('socket.io')(http);
+var express = require('express');
 
 console.log("Hi Mrs. Horning!");
 
@@ -20,3 +21,5 @@ io.on('connection', function(socket)
 
 http.listen(port);
 console.log("Listening on port: " + port);
+console.log("enter localhost:3000 to join server");
+
